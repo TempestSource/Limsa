@@ -1,0 +1,10 @@
+---
+- name: Update System
+  hosts: limsa
+  become: true
+
+  tasks:
+    - name: Full System Upgrade
+      community.general.pacman:
+        update_cache: true
+        upgrade: true

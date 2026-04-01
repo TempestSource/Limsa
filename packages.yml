@@ -1,0 +1,21 @@
+---
+- name: Install Packages on Target System
+  hosts: limsa
+  become: true
+
+  tasks:
+    - name: Packages Installation
+      community.general.pacman:
+        name:
+          - firefox
+          - caligula
+          - discord
+          - code
+          - spotify-launcher
+          - nerd-fonts
+          - lazygit
+          - ttf-jetbrains-mono
+          - exa
+          - ruby
+          - zsh
+          - zsh-completions
